@@ -1,0 +1,65 @@
+const express = require('express');
+const { getDatabase, ref, set, get, child } = require('firebase/database');
+const app = require('./config'); // Jo config file humne pehle banayi thi
+
+const server = express();
+const PORT = process.env.PORT || 3000;
+
+// JSON data accept karne ke liye middleware
+server.use(express.json());
+
+// Firebase Realtime Database Instance initialize karein
+const db = getDatabase(app);
+
+// 1. Test Route (Check karne ke liye ki server chal raha hai ya nahi)
+server.get('/', (req, res) => {
+    res.status(200).json({ message: "Node.js Server is Running Perfectly!" });
+});
+
+// 2. Data SAVE (Insert/Write) karne ka Route
+server.post('/api/save-data', async (req, res) => {
+    try {
+        const { userId, name, email, role } = req.body;
+
+        if (!userId) {
+            return res.status(400).json({ error: "userId zaroori hai!" });
+        }
+
+        // Database mein 'users/userId' wale path par data save hoga
+        await set(ref(db, 'users/' + userId), {
+            username: name,
+            email: email,
+            role: role || "user",
+            createdAt: new Date().toISOString()
+        });
+
+        res.status(200).json({ success: true, message: "Data successfully save ho gaya!" });
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// 3. Data FETCH (Read) karne ka Route
+server.get('/api/get-user/:userId', async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const dbRef = ref(db);
+        
+        const snapshot = await get(child(dbRef, `users/${userId}`));
+        
+        if (snapshot.exists()) {
+            res.status(200).json({ success: true, data: snapshot.val() });
+        } else {
+            res.status(404).json({ success: false, message: "User nahi mila!" });
+        }
+    } catch (error) {
+        res.status(500).json({ success: false, error: error.message });
+    }
+});
+
+// Server ko port par listen karwayein
+server.listen(PORT, () => {
+    console.log(`Server successfully started on port ${PORT}`);
+});
+
+module.exports = server;

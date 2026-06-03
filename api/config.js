@@ -1,19 +1,17 @@
-const dotenv = require('dotenv');
 const { initializeApp, getApps, getApp } = require("firebase/app");
 
-dotenv.config();
-
 const firebaseConfig = {
-    apiKey: process.env.FIREBASE_API_KEY,
-    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.FIREBASE_APP_ID,
-    measurementId: process.env.FIREBASE_MEASUREMENT_ID
+    apiKey: "AiZaSyDSHiNVzkloQa2j3bMsT0rm...", // Aapki complete key yahan rahegi
+    authDomain: "vip-servers-d9788.firebaseapp.com",
+    databaseURL: "https://vip-servers-d9788-default-rtdb.firebaseio.com", 
+    projectId: "vip-servers-d9788",
+    storageBucket: "vip-servers-d9788.appspot.com",
+    messagingSenderId: "43489242493",
+    appId: "1:43489242493:web:b582518bc6399cee93b014",
+    measurementId: "G-NE3H5W1CD4"
 };
 
-// Singleton pattern: server crash hone se bachata hai
+// Singleton pattern: bina env ke bhi crash hone se bachayega
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 module.exports = app;
